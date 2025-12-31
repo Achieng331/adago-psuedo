@@ -1,0 +1,395 @@
+/* GLOBAL STYLES */
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,700;1,400;1,500;1,600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4 {
+    font-size: 24px;
+    color: #222;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+body {
+    width: 100%;
+}
+
+/* HEADER START */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 80px;
+    background-color: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+}
+
+#navbar li a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: darkblue;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 2px;
+    background-color: darkblue;
+    bottom: -4px;
+    left: 20px;
+}
+
+/* HERO SECTION */
+#hero {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    padding: 0;
+    background-color: whitesmoke;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Left Side: Hero Text Content */
+.hero-content {
+    width: 50vw;
+    flex-shrink: 0;
+    padding-left: 80px;
+    padding-right: 40px;
+    color: #FFFFFF;
+    background-color: inherit;
+    z-index: 10;
+}
+
+#hero h4 {
+    color: darkblue;
+    padding-bottom: 5px;
+}
+
+#hero h1 {
+    color: darkblue;
+}
+
+#hero h2 {
+    color: darkblue;
+}
+
+#hero p {
+    color: black;
+    margin: 15px 0 20px 0;
+}
+
+#hero button {
+    background-color: blue;
+    color: black;
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#hero button:hover {
+    background-color: #ff5252;
+}
+
+/* Right Side: Hero Image */
+.hero-image-wrapper {
+    flex-grow: 1;
+    width: calc(100vw - 50vw);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+#feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#feature .fe-box {
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 15px;
+}
+
+#feature .fe-box:hover {
+    box-shadow: 10px 10px 54px rgba(0,0,0,0.06);
+}
+
+#feature .fe-box img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+#feature .fe-box h6 {
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: skyblue;
+    background-color: skyblue;
+}
+
+#product1 {
+    text-align: center;
+}
+
+#product1 .pro-container {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#product1 .pro {
+    width: calc(20% - 12px);
+    min-width: 180px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#product1 .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product1 .pro:hover {
+    box-shadow: 20px 20px 54px rgba(0,0,0,0.06);
+}
+
+#product1 .pro .des {
+    padding: 10px 0;
+    width: 100%;
+    text-align: left;
+}
+
+#product1 .pro .des span {
+    color: slateblue;
+    font-size: 14px;
+}
+
+#product1 .pro .des h5 {
+    padding-top: 7px;
+    color: blueviolet;
+    font-size: 14px;
+}
+
+#product1 .pro .des i {
+    font-size: 12px;
+    color: #fdc868;
+}
+
+#product1 .pro .des h4 {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: darkblue;
+}
+
+#product1 .pro .cart {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #cce7d0;
+    font-weight: 500;
+    color: darkblue;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+#product1 .pro .cart:hover {
+    background-color: blue;
+    color: white;
+    border: 1px solid blue;
+}
+
+/* --- FOOTER STYLES (Multi-Column Flexbox - Desktop) --- */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+/* Added Footer Styles for completeness based on HTML */
+footer a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+footer a:hover {
+    color: darkblue;
+}
+
+footer .install .row img {
+    border: 1px solid darkblue;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+footer .install .row img:nth-child(2) {
+    margin-left: 5px;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    color: #465b52;
+}
+
+/* --- RESPONSIVENESS (Footer and other sections adjustments) --- */
+
+@media (max-width: 1024px) {
+    /* Tablet adjustments for sections you have already defined */
+    .section-p1 {
+        padding: 40px 40px;
+    }
+    
+    #product1 .pro {
+        /* Adjust to 3 per row on most tablets */
+        width: calc(33.33% - 15px);
+        min-width: 200px;
+    }
+
+    /* === FOOTER COLUMN OVERRIDES (2 columns per row) --- */
+    footer {
+        justify-content: space-around;
+    }
+
+    footer .col {
+        flex-basis: 45%; /* Allows two columns per row */
+        min-width: 200px; 
+    }
+
+    footer .install {
+        flex-basis: 100%; /* Forces Install/Payment section to take full width */
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Smaller Tablet/Large Phone adjustments for sections you have already defined */
+    #product1 .pro {
+        /* Adjust to 2 per row */
+        width: calc(50% - 10px);
+    }
+}
+
+
+@media (max-width: 477px) {
+    /* === MOBILE PHONE OVERRIDES === */
+    .section-p1 {
+        padding: 20px;
+    }
+    #header {
+        padding: 10px 20px;
+    }
+
+    /* === FOOTER COLUMN OVERRIDES (1 per row) === */
+    footer .col {
+        width: 100%;
+        flex-basis: 100%;
+    }
+    
+    /* === PRODUCT GRID OVERRIDES (1 product per row) === */
+    #product1 .pro {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+}
